@@ -50,6 +50,13 @@ namespace Uno.UI
 			return new AndConstraint<SizeAssertion>(this);
 		}
 
+		public AndConstraint<SizeAssertion> BeEmpty(string because = null, params object[] becauseArgs)
+		{
+			_size.Should().Be(default);
+
+			return new AndConstraint<SizeAssertion>(this);
+		}
+
 		public AndConstraint<SizeAssertion> BeOfWidth(double expectedWidth, double? epsilon = null, string because = null, params object[] becauseArgs)
 		{
 			Validate(expectedWidth, _size.Width, epsilon, because, becauseArgs, "Width");
