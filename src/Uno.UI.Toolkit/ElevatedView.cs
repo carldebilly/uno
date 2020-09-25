@@ -25,20 +25,20 @@ namespace Uno.UI.Toolkit
 #endif
 	{
 		/*
-		 *  +-ElevatedView------------+
-		 *  |                         |
-		 *  |  +-Grid--------------+  |
-		 *  |  |                   |  |
-		 *  |  +-------------------+  |
-		 *  |  +-Border------------+  |
-		 *  |  |                   |  |
-		 *  |  |  +-Content-----+  |  |
-		 *  |  |  | (...)       |  |  |
-		 *  |  |  +-------------+  |  |
-		 *  |  |                   |  |
-		 *  |  +-------------------+  |
-		 *  |                         |
-		 *  +-------------------------+
+		 *  +-ElevatedView---------------------+
+		 *  |                                  |
+		 *  |  +-Canvas (PART_ShadowHost)---+  |
+		 *  |  |                            |  |
+		 *  |  +----------------------------+  |
+		 *  |  +-Border (PART_Border)-------+  |
+		 *  |  |                            |  |
+		 *  |  |  +-Content--------------+  |  |
+		 *  |  |  | (...)                |  |  |
+		 *  |  |  +----------------------+  |  |
+		 *  |  |                            |  |
+		 *  |  +----------------------------+  |
+		 *  |                                  |
+		 *  +----------------------------------+
 		 *
 		 * UWP - Grid is responsible for the shadow
 		 * Other Platforms - Elevated is responsible for the shadow
@@ -172,7 +172,8 @@ namespace Uno.UI.Toolkit
 #elif __IOS__ || __MACOS__
 				this.SetElevationInternal(Elevation, ShadowColor, _border.BoundsPath);
 #elif __ANDROID__
-				_border.SetElevationInternal(Elevation, ShadowColor);
+				_shadowHost.SetElevationInternal(Elevation, ShadowColor);
+				_shadowHost.CornerRadius = CornerRadius;
 #elif NETFX_CORE
 				(ElevatedContent as DependencyObject).SetElevationInternal(Elevation, ShadowColor, _shadowHost as DependencyObject, CornerRadius);
 #endif
