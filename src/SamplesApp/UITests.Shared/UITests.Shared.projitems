@@ -953,6 +953,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\Image_Formats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\Image_ImageSource_PixelSize.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -4199,6 +4203,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\ImageWithLateSourceUniformToFill.xaml.cs">
       <DependentUpon>ImageWithLateSourceUniformToFill.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\Image_Formats.xaml.cs">
+      <DependentUpon>Image_Formats.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\Image_ImageSource_PixelSize.xaml.cs">
       <DependentUpon>Image_ImageSource_PixelSize.xaml</DependentUpon>
     </Compile>
@@ -6366,6 +6373,10 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\DropdownButton.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\FlipView.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Fonts\uno-fluentui-assets.ttf" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.bmp" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\icon.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Icons\menu.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Icons\search.png" />
@@ -6474,6 +6485,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.svg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.webp" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.heic" />
     <None Include="$(MSBuildThisFileDirectory)ItemExclusions.props" />
   </ItemGroup>
   <Import Project="ItemExclusions.props" />
