@@ -144,6 +144,14 @@
 		</ProjectReference>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="UI\Xaml\Media\Imaging\SvgImageSource.wasm.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="UI\Xaml\Media\Imaging\SvgImageSource.wasm.cs" />
+	</ItemGroup>
+
 	<Target Name="_UnoWasmOverrideNuget" AfterTargets="AfterBuild" DependsOnTargets="BuiltProjectOutputGroup" Condition="'$(UnoNugetOverrideVersion)'!=''">
 
 		<PropertyGroup>

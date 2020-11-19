@@ -96,7 +96,7 @@ namespace Windows.UI.Xaml.Controls
 							_htmlImage.SetAttribute("src", "");
 							break;
 
-						case ImageDataKind.Base64:
+						case ImageDataKind.DataUri:
 						case ImageDataKind.Url:
 						default:
 							if (MonochromeColor != null)

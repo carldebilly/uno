@@ -993,6 +993,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\Image_Svg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\Image_Transforms.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -4228,6 +4232,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\Image_Stretch_Modes_Picker.xaml.cs">
       <DependentUpon>Image_Stretch_Modes_Picker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\Image_Svg.xaml.cs">
+      <DependentUpon>Image_Svg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Windows_UI_Xaml_Controls\ImageTests\Image_Transforms.xaml.cs">
       <DependentUpon>Image_Transforms.xaml</DependentUpon>
     </Compile>
@@ -6488,6 +6495,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.svg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.webp" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.heic" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Formats\uno-overalls.pdf" />
     <None Include="$(MSBuildThisFileDirectory)ItemExclusions.props" />
   </ItemGroup>
   <Import Project="ItemExclusions.props" />

@@ -44,7 +44,7 @@ namespace Windows.UI.Xaml.Media
 
 				img = new ImageData
 				{
-					Kind = ImageDataKind.Base64,
+					Kind = ImageDataKind.DataUri,
 					Value = "data:application/octet-stream;base64," + encodedBytes
 				};
 				return true;
